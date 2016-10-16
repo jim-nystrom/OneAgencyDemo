@@ -30,8 +30,6 @@ class Login extends Component {
 
         this.state = {
             showProgress: false,
-            usernameNotFound: false,
-            passwordIncorrect: false,
         }
     }
 
@@ -48,10 +46,15 @@ class Login extends Component {
                 Password is incorrect!
             </Text>
         }
+        if (this.state.success) {
+            errorCtrl = <Text style={styles.success}>
+                Great success
+            </Text>
+        }
         return (
             <View style={styles.container}>
                 <Image style={styles.logo}
-                    source={require('./img/oneLogo.png') } />
+                    source={require('./img/OA.png') } />
                 <Text style={styles.heading}>
                     One Agency
                 </Text>
@@ -141,7 +144,8 @@ const styles = StyleSheet.create({
         fontSize: 18,
         borderWidth: 1,
         borderColor: "#777",
-        borderRadius: 4
+        borderRadius: 4,
+        backgroundColor: '#fff',
     },
     button: {
         height: 50,
@@ -163,6 +167,11 @@ const styles = StyleSheet.create({
     },
     error: {
         color: 'red',
+        paddingTop:10,
+        fontSize: 18,
+    },
+    success: {
+        color: 'green',
         paddingTop:10,
         fontSize: 18,
     }
