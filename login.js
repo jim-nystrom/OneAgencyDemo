@@ -54,7 +54,7 @@ class Login extends Component {
         return (
             <View style={styles.container}>
                 <Image style={styles.logo}
-                    source={require('./img/OA.png') } />
+                    source={require('./app/images/OA.png') } />
                 <Text style={styles.heading}>
                     One Agency
                 </Text>
