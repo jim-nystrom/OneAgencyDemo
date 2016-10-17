@@ -1,38 +1,4 @@
-import React, { Component } from 'react';
-import {
-  AppRegistry,
-  StyleSheet,
-  Text,
-  View
-} from 'react-native';
-var Login = require('./login');
+import { AppRegistry} from 'react-native';
+import App from './app';
 
-
-class GitHubBrowser extends Component {
-  render() {
-    return (
-      <Login />
-    );
-  }
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
-});
-
-AppRegistry.registerComponent('OneAgencyDemo', () => GitHubBrowser);
+AppRegistry.registerComponent('OneAgencyDemo', () => App);
